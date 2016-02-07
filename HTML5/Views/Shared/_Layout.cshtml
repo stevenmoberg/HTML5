@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Html.RenderStyle("/Content/css/site.css")
+    @RenderSection("style", false)
+</head>
+<body>
+    <div id="header">
+        <a href="/FileAPI">FileAPI</a>
+    </div>
+    <div id="sidebar">
+        {sidebar}
+    </div>
+
+    <div id="content">
+        @RenderBody()
+    </div>
+
+    <div id="footer">
+        {footer}
+    </div>
+
+    @Html.RenderScript("/Content/js/jquery-2.2.0.js")
+    @RenderSection("scripts", false)
+</body>
+
+</html>
